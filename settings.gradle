@@ -1,0 +1,9 @@
+rootProject.name = 'learngl'
+
+include 'common'
+
+include 'getting-started:01-textures'
+include 'getting-started:02-transformations'
+include 'getting-started:03-coordinatesystem'
+include 'getting-started:04-camera'
+

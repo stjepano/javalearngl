@@ -1,0 +1,35 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'com.stjepano'
+version = '1.0-SNAPSHOT'
+
+project.ext.lwjglVersion = "3.3.6"
+project.ext.lwjglNatives = "natives-windows"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+
+    api "org.lwjgl:lwjgl"
+    api "org.lwjgl:lwjgl-glfw"
+    api "org.lwjgl:lwjgl-opengl"
+    api "org.lwjgl:lwjgl-stb"
+
+    api group: 'org.slf4j', name: 'slf4j-api', version: '2.0.17'
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
+    implementation group: 'ch.qos.logback', name: 'logback-classic', version: '1.5.17'
+    // https://mvnrepository.com/artifact/ch.qos.logback/logback-core
+    implementation group: 'ch.qos.logback', name: 'logback-core', version: '1.5.17'
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
