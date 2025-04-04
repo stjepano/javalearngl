@@ -1,0 +1,5 @@
+
+ext {
+    lwjglVersion = "3.3.6"
+    lwjglNatives = System.getProperty("os.name").toLowerCase().contains("win") ? "natives-windows" : "natives-linux"
+}

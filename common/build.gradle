@@ -5,9 +5,6 @@ plugins {
 group = 'com.stjepano'
 version = '1.0-SNAPSHOT'
 
-project.ext.lwjglVersion = "3.3.6"
-project.ext.lwjglNatives = "natives-windows"
-
 repositories {
     mavenCentral()
 }
